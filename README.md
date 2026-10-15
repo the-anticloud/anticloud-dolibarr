@@ -1,247 +1,72 @@
 # DOLIBARR
 
-**Category:** CONSULTANCY
-**Status:** Active development with Anticloud overlay
+> Anticloud offline package — upstream: Dolibarr/dolibarr @ `develop`.
 
 ## What This Project Does
 
-DOLIBARR is an open-source project in the CONSULTANCY category.
+Dolibarr ERP CRM is a modern software package to manage your company or foundation's activity (contacts, suppliers, invoices, orders, stocks, agenda, accounting, ...). it's an open source Web application (written in PHP) designed for businesses of any sizes, foundations and freelancers.
 
-This project provides tools, libraries, and functionality for developers
-and end users working in the CONSULTANCY domain. It is part of the
-Anticloud ecosystem, which adds measured performance improvements,
-security hardening, and comprehensive documentation to upstream
-open-source projects.
+**Topics:** accounting, agenda, crm, erp, hacktoberfest, human-resource-managment, invoice, invoices, invoicing, mysql, orders, php, postgresql, proposal, purchase, quotations, sales, stock, stocks, suppliers
 
-The project addresses key challenges in CONSULTANCY by providing:
+## Upstream README
 
-- A well-tested, community-driven codebase
-- Standard interfaces compatible with the broader ecosystem
-- Documentation and examples for common use cases
-- Integration points for the Anticloud overlay improvements
+# DOLIBARR ERP & CRM
 
-## Installation
+![Downloads per day](https://img.shields.io/sourceforge/dw/dolibarr.svg)
+![Docker hub pulls](https://img.shields.io/docker/pulls/dolibarr/dolibarr.svg)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.2-8892BF.svg?style=flat-square)](https://php.net/)
+[![GitHub release](https://img.shields.io/github/v/release/Dolibarr/dolibarr)](https://github.com/Dolibarr/dolibarr)
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/5521/badge)](https://bestpractices.coreinfrastructure.org/projects/5521)
 
-### Prerequisites
+Dolibarr ERP & CRM is a modern software package that helps manage your organization's activities (contacts, quotes, invoices, orders, stocks, agenda, human resources, ecm, manufacturing…).
 
-Before installing DOLIBARR, ensure you have the following:
+It's an Open-Source Software suite (written in PHP with JavaScript enhancements) designed for small, medium or large companies, foundations and freelancers.
 
-- A compatible operating system (Linux, macOS, or Windows)
-- Required build tools as specified by the upstream project
-- Runtime dependencies per the upstream requirements
+You can freely use, study, modify or distribute it according to its license.
 
-### From Source
+You can use it as a standalone application or as a web application to access it from the Internet or from a LAN.
 
-To build from source, clone the repository and follow the
-upstream build instructions:
+Dolibarr has a large community ready to help you, free forums and [preferred partners ready to offer commercial support should you need it](https://partners.dolibarr.org)
 
-```bash
-git clone https://github.com/dolibarr/dolibarr/dolibarr.git
-cd dolibarr
-make
-sudo make install
-```
+![ScreenShot](https://www.dolibarr.org/medias/dolibarr_screenshot1_1920x1080.jpg)
 
-### Package Managers
 
-Depending on your platform, DOLIBARR may be available
-through package managers such as apt, brew, or pip. Refer to
-the upstream documentation for platform-specific instructions.
+## LICENSE
 
-## Usage
+Dolibarr is released under the terms of the GNU General Public License as published by the Free Software Foundation; either Version 3 of the License, or (at your option) any later version (GPL-3+).
 
-### Basic Usage
+See the [COPYING](https://github.com/Dolibarr/dolibarr/blob/develop/COPYING) file for a full copy of the license.
 
-After installation, DOLIBARR can be invoked as follows:
+Other licenses apply for some included dependencies. See [COPYRIGHT](https://github.com/Dolibarr/dolibarr/blob/develop/COPYRIGHT) for a full list.
 
-```bash
-dolibarr --help
-dolibarr
-```
 
-### Common Operations
+## INSTALLING
 
-1. **Initialization** - Set up the project environment and configuration
-2. **Execution** - Run the main functionality with appropriate parameters
-3. **Monitoring** - Check status and output during operation
-4. **Shutdown** - Cleanly terminate and save state
+There is a lot of different solutions to install Dolibarr.
 
-### Examples
+### Using packages 
 
-```bash
-dolibarr --input /path/to/input --output /path/to/output
-dolibarr --config /path/to/config.yaml
-dolibarr --verbose --log-level debug
-```
+If you have low technical skills and you're looking to install Dolibarr ERP/CRM with just a few clicks, you can use one of the packaged versions (see next chapter if you have IT knowledge):
 
-## API
+- [DoliWamp for Windows](https://wiki.dolibarr.org/index.php/Dolibarr_for_Windows_(DoliWamp))
+- [DoliDeb for Debian, Ubuntu](https://wiki.dolibarr.org/index.php/Dolibarr_for_Ubuntu_or_Debian)
+- DoliRpm for Red Hat, Fedora, openSUSE, Mandriva or Mageia
+- The Docker image (see chapter "Using Docker")
 
-### Overview
+Releases can be downloaded from [official website](https://www.dolibarr.org/).
 
-DOLIBARR exposes a standard API consistent with its category.
-The API can be accessed programmatically or through the command
-line interface.
+### Using the generic step by step setup (recommended for IT users)
 
-### Endpoints
+You can use any web server supporting PHP (Apache, Nginx, ...) and a supported database (MariaDB, MySQL or PostgreSQL) to install the standard version:
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /status | Get current status |
-| POST | /execute | Execute main operation |
-| GET | /results | Retrieve results |
-| DELETE | /reset | Reset to initial state |
+- Verify that your installed PHP version is supported [see PHP support](https://wiki.dolibarr.org/index.php/Releases).
 
-### Authentication
-
-API authentication is handled through standard mechanisms.
-Refer to the upstream documentation for specific authentication
-requirements and token management.
-
-### Rate Limiting
-
-The API implements rate limiting to prevent abuse. Default limits
-are configurable through the configuration file.
-
-## Dependencies
-
-### Build Dependencies
-
-- Compiler (GCC, Clang, or MSVC)
-- Build system (Make, CMake, or Meson)
-- Package manager (pip, npm, or cargo)
-
-### Runtime Dependencies
-
-Runtime dependencies are managed by the upstream project build
-system. Key dependencies include:
-
-- Standard library components
-- Third-party libraries as specified in upstream documentation
-- System libraries required for operation
-
-### Optional Dependencies
-
-Some features may require additional optional dependencies.
-These are documented in the upstream README and can be
-installed separately as needed.
-
-## Configuration
-
-### Configuration File
-
-DOLIBARR uses a configuration file for runtime settings.
-The default location is typically:
-
-- **Linux/macOS:** ~/.config/dolibarr/config.yaml
-- **Windows:** %APPDATA%\dolibarr\config.yaml
-
-### Configuration Options
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| log_level | string | info | Logging verbosity |
-| output_dir | string | ./output | Output directory |
-| max_workers | int | 4 | Maximum worker threads |
-| timeout | int | 30 | Operation timeout (seconds) |
-
-### Environment Variables
-
-The following environment variables can override configuration:
-
-- **DOLIBARR_LOG_LEVEL** - Override log level
-- **DOLIBARR_CONFIG** - Path to custom config file
-- **DOLIBARR_OUTPUT** - Override output directory
-
-## Contributing
-
-Contributions to DOLIBARR are welcome. Please follow
-these guidelines:
-
-1. **Fork the repository** and create a feature branch
-2. **Make your changes** with clear commit messages
-3. **Add tests** for new functionality
-4. **Update documentation** as needed
-5. **Submit a pull request** with a clear description
-
-### Code Style
-
-Follow the code style established in the upstream project.
-Use consistent formatting, meaningful variable names, and
-clear comments for complex logic.
-
-### Reporting Issues
-
-When reporting issues, please include:
-
-- Operating system and version
-- Project version or commit hash
-- Steps to reproduce the issue
-- Expected vs actual behavior
-- Relevant log output
+- Uncompress the downloaded .zip archive to copy the `dolibarr/htdocs` directory and all its files inside your web server root or get the files directly from 
 
 ## License
 
-**Overlay license:** Anticommons 0.1.0
-**Upstream license:** MIT
+Upstream terms preserved in `THIRD_PARTY_LICENSES/`. Overlay licensed under Anticommons 0.1.0.
 
-This project is distributed under the MIT license.
-The Anticloud overlay is licensed under Anticommons 0.1.0,
-which ensures that improvements remain available to the
-community while preventing enclosure by any single entity.
+## Verification
 
-## Upstream
-
-**SHA-256:** `f669c0a10753ccbf480c3dcf389c985d073fb589`
-
-The upstream project is pinned to the above commit hash
-to ensure reproducible builds and verifiable provenance.
-
-## Benchmarks
-
-Benchmark results are recorded in BENCH.json.
-
-Measurements were taken on the upstream codebase with the
-Anticloud overlay applied. Key metrics include:
-
-- **Build time** - Time to compile from source
-- **Binary size** - Compiled artifact size
-- **Runtime performance** - Execution speed benchmarks
-- **Memory usage** - Peak and average memory consumption
-- **Test coverage** - Percentage of code covered by tests
-
-All measurements are reproducible and verified against the
-pinned upstream commit.
-
-## Additional Information
-
-This project is part of the Anticloud ecosystem, providing
-CONSULTANCY functionality with measured performance characteristics.
-
-The overlay adds 12 improvements including performance
-optimizations, security hardening, documentation generation,
-benchmark measurement, license compliance, dependency auditing,
-SBOM generation, seal verification, quality gates, contamination
-detection, press distribution, and family background integration.
-
-## Archives and Permanent Records
-
-| Platform | Identifier | Volume |
-|---|---|---|
-| Harvard Dataverse | DOI 10.7910/DVN/YMJKOG | 145 citable datasets |
-| AIOSS verification kit | DOI 10.7910/DVN/OORKNJ | Offline hash verification |
-| Zenodo (CERN) | — | 146 records, DOI-registered |
-| OSF | — | 144 preregistered records |
-| Figshare | author 20849885 | Research data and figures |
-| Internet Archive | aioss-format, Anticode | Permanent binary specification |
-| ORCID | 0009-0009-2233-6107 | Permanent researcher ID |
-| Kaggle | pax-millennium-20 | Reproducible T4 benchmark run |
-
-
-
-## Press and Independent Publication
-
-The PAX benchmark release was distributed by Newsfile wire to 336 outlets
-(312 Web, 23 Terminal, 1 Application), including Yahoo Finance, The Globe and Mail, Business Insider, National Post, Financial Post, StreetInsider, Digital Journal, Barchart, International Business Times, and fox47 · National Law Review.
-Wire distribution makes the announcement dated, public, and indexed, which
-makes the claim checkable.
-
+Recompute the SHA3-256 of `BENCH.json` and compare to this package’s register. Any drift = invalid package.
